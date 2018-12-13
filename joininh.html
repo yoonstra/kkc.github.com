@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Hardware market">
+	<meta name="keywords" content="Desktop, Laptop, CCTV">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<title>KKC Coperation</title>
+</head>
+<body onload="javascript:getLocation();">
+	<header class="cd-header">
+		<div class="cd-logo"><a href="index.html"><img src="img/LOGO.PNG" alt="Logo"></a></div>
+
+		<nav>
+			<ul class="cd-secondary-nav">
+			<!--	<li><a href="#0">Log In</a></li>
+				<li><a href="#0">Register</a></li> -->
+			</ul>
+		</nav> <!-- cd-nav -->
+
+		<a class="cd-primary-nav-trigger" href="#0">
+			<span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span>
+		</a> <!-- cd-primary-nav-trigger -->
+	</header>
+
+	<nav>
+		<ul class="cd-primary-nav">
+			<li class="cd-label">About us</li>
+
+			<li><a href="ourteam.html">The team</a></li>
+			<li><a href="service.html">Our services</a></li>
+			<li><a href="project.html">Our projects</a></li>
+
+			<li class="cd-label">Work with us</li>
+
+			<li><a href="trading.html">A trading Client</a></li>
+			<li><a href="joininh.html">Join In</a></li>
+
+			<li class="cd-label">Follow us</li>
+
+			<li class="cd-social cd-facebook"><a href="https://www.facebook.com/KKComputer.Corp/">Facebook</a></li>
+			<li class="cd-social cd-instagram"><a href="#0">Instagram</a></li>
+			<!--<li class="cd-social cd-dribbble"><a href="#0">Dribbble</a></li>-->
+			<li class="cd-social cd-twitter"><a href="#0">Twitter</a></li>
+		</ul>
+	</nav>
+
+	<section class="cd-intro">
+		<h1>It's King Kong Computer, number one in the computer industry.</h1>
+	</section>
+
+	<main class="cd-main-content">
+		<div class="cd-container">
+			<p>Directions</p>
+			<hr>
+			<table>
+				<tr>
+					<td width="70%"><p align="center" id="mapholder"></p></td>
+					<td>
+						We are preparing domestic distributor.<br>
+						We wait for your contact.<br><br><br>
+						King Kong Computer Corporation <br><br>
+						Address : 608 Calderon Street, Addition Hills Mandaluyong City <br><br>
+						Telephone : (02)879-7058, +63-2879-7058 <br><br>
+						E-mail : kkccorporation@yahoo.com <br><br>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+	</main>
+
+	<footer class="cd-footer">
+		<!--<p>Copyright <i class="far fa-copyright fa-1x"></i> 2019 KKC Company All rights reserved</p>-->
+
+		<p>King Kong Computer Corporation<a href="https://www.denr.gov.ph/" target="_blank"><img class="fst" src="img/DENR.png" alt="Department of Environment and Natural Resources"> </a>
+		<a href="http://www.peza.gov.ph/" target="_blank"><img class="sec" src="img/peza.png" alt="Philippine Economic Zone Authority"><br> </a>
+
+		608 Calderon Street, Addition Hills Mandaluyong City<br>
+		Telephone : (02)879-7058, +63-2879-7058 <br>
+		kkccorporation@yahoo.com
+		</p>
+
+		<script src="https://maps.google.com/maps/api/js?key=AIzaSyDh8WWw6mGrq7a2obcGwsJgU4xxlkWFjWI"></script>
+		<script>
+		var x=document.getElementById("demo");
+		function getLocation()
+		  {
+		  if (navigator.geolocation)
+		    {
+		    navigator.geolocation.getCurrentPosition(showPosition,showError);
+		    }
+		  else{x.innerHTML="Geolocation is not supported by this browser.";}
+		  }
+
+		function showPosition(position)
+		  {
+		  var lat=position.coords.latitude;
+		  var lon=position.coords.longitude;
+		  var latlon=new google.maps.LatLng(14.5899038,121.0405245)
+		  var mapholder=document.getElementById('mapholder')
+		  mapholder.style.height='250px';
+		  mapholder.style.width='90%';
+
+		  var myOptions={
+		  center:latlon,zoom:18,
+		  mapTypeId:google.maps.MapTypeId.ROADMAP,
+		  mapTypeControl:false,
+		  navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+		  };
+		  var map=new google.maps.Map(document.getElementById("mapholder"),myOptions);
+		  var marker=new google.maps.Marker({position:latlon,map:map,title:"KKC Corporation!"});
+		  }
+
+		function showError(error)
+		  {
+		  switch(error.code)
+		    {
+		    case error.PERMISSION_DENIED:
+		      x.innerHTML="User denied the request for Geolocation."
+		      break;
+		    case error.POSITION_UNAVAILABLE:
+		      x.innerHTML="Location information is unavailable."
+		      break;
+		    case error.TIMEOUT:
+		      x.innerHTML="The request to get user location timed out."
+		      break;
+		    case error.UNKNOWN_ERROR:
+		      x.innerHTML="An unknown error occurred."
+		      break;
+		    }
+		  }
+		</script>
+
+	</footer>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
