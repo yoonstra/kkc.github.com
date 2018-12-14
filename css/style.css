@@ -401,6 +401,7 @@ html, body {
     font-size: 30px;
     font-size: 1.875rem;
   }
+
 }
 @media only screen and (min-width: 1170px) {
   .cd-intro {
@@ -476,20 +477,22 @@ table {
   padding-right: 20px;
   padding-bottom: 80px;
   vertical-align: middle
-
+  text-align: left;
 }
 
-
-.cd-tb td {
-    text-align: left;
-}
 
 .cd-tb2 td {
   vertical-align: middle
 }
 
+.cd-tb3 td {
+  vertical-align: middle
+}
+
+
+
 @media only screen and (max-width: 768px) {
-  .cd-tabled, .cd-tb {
+  .cd-tabled, .cd-tb, .cd-tb2 {
       display: block;
       width: 100%;
       margin: 0 -10px;
@@ -505,7 +508,7 @@ table {
       display: block;
       margin: 0 -3px;
   }
-  .cd-tabled td, .cd-tb td {
+  .cd-tabled td, .cd-tb td, .cd-tb2 td {
     display: block;
   }
   .cd-footer img{
