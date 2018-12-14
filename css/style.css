@@ -456,27 +456,34 @@ html, body {
 
 
 .cd-table {
-  max-width:960px; margin:5px auto; padding:5px;
+  max-width:960px;
+  padding:5px;
+  margin:5px auto;
 }
+
 table {
     width: 100%;
 }
 
-td {
+
+.cd-tabled td {
+    text-align: center;
     padding: 5px;
     vertical-align: middle
 }
 
-.cd-tabled td {
-    text-align: center;
+.cd-tb td{
+  padding-right: 20px;
+  padding-bottom: 80px;
+  vertical-align: middle
 
 }
+
 
 .cd-tb td {
     text-align: left;
 
 }
-
 
 @media only screen and (max-width: 768px) {
   .cd-tabled, .cd-tb {
