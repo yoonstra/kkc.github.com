@@ -482,7 +482,10 @@ table {
 
 .cd-tb td {
     text-align: left;
+}
 
+.cd-tb2 td {
+  vertical-align: middle
 }
 
 @media only screen and (max-width: 768px) {
