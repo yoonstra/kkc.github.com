@@ -469,10 +469,17 @@ td {
 
 .cd-tabled td {
     text-align: center;
+
 }
 
+.cd-tb td {
+    text-align: left;
+
+}
+
+
 @media only screen and (max-width: 768px) {
-  .cd-tabled {
+  .cd-tabled, .cd-tb {
       display: block;
       width: 100%;
       margin: 0 -10px;
@@ -488,18 +495,11 @@ td {
       display: block;
       margin: 0 -3px;
   }
-  .cd-tabled td {
+  .cd-tabled td, .cd-tb td {
     display: block;
   }
   .cd-footer img{
-    display: block;
-    width: 5%;
-    height: 5%;
-  }
-
-  .cd-footer .sec {
-    position: absolute;
-    right: 40px;
+    display: none;
   }
 }
 
